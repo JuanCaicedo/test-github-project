@@ -1,4 +1,7 @@
-version: 2.0
+version: 2.1
+
+orbs:
+  hello: circleci/hello-build@0.0.5
 
 jobs:
   build:
@@ -6,4 +9,4 @@ jobs:
       - image: circleci/node:8.11-stretch-browsers
     steps:
       - checkout
-      - run: exit 0
+      - hello/hello-build
